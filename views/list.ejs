@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="js.js">
+    <meta http-equiv="refresh" content="50">
+</head>
+
+<body>
+
+
+
+    <div id="heading" class="box">
+        
+        <h1>
+            <%= listTitle %>
+        </h1>
+    </div>
+
+    <div class="box">
+
+        
+
+        <ul>
+
+            <% for(var i=0; i<newItem.length;i++){ %>
+                <div class="item"> <input type="checkbox">
+                    <p>
+                        <%= newItem[i] %>
+                    </p><br>
+                </div>
+                <%}%>
+
+        </ul>
+
+        <form action="/" method="post">
+            <input type="text" name="text" placeholder="New Item" id="hh" autocomplete="off">
+            <button type="submit" name="button" value="<%=listTitle%>">+</button><br><br></div>
+
+        </form>
+        
+        <form action="/" method="post">
+
+            <button id="delete"  type="submit" name="delete" value="delete">Clear All</button>
+        </form>
+
+</body>
+
+
+</html>
